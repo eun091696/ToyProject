@@ -1,0 +1,15 @@
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+a {
+    text-decoration-line: none;
+}
+
+.btn {
+    border: none;
+    background-color: white;
+    font-size: 7px;
+    font-weight: 700;
+}
