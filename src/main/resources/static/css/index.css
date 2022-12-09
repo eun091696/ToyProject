@@ -12,7 +12,7 @@
 }
 
 .logo-img {
-    height: 150px;
+    height: 100px;
 }
 
 .nav {
@@ -31,3 +31,13 @@
     font-weight: 700;
 }
 
+.menu-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.str-img {
+    margin-top: 30px;
+    width: 500px;
+}
