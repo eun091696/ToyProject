@@ -1,0 +1,46 @@
+.header {
+    border-bottom: 1px solid ;
+}
+
+.login-btn, .register-btn {
+    background-color: white;
+    color: black;
+    font-size: 15px;
+}
+
+.login-btn:hover {
+    color: gray;
+}
+
+.register-btn:hover {
+    color: gray;
+}
+
+.top-link {
+    text-align: right;
+}
+
+.main-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.logo-img {
+    height: 100px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+}
+
+.category {
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+}
+
+.category li a:hover {
+    color: black;
+    font-weight: 700;
+}

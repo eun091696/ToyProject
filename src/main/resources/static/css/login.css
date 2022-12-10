@@ -1,0 +1,37 @@
+.main {
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .login-content {
+    margin: 10px auto;
+    width: 600px;
+  }
+  
+  .login-content p {
+    font-size: 25px;
+    font-weight: 500;
+  
+    margin-bottom: 10px;
+  }
+  
+  .login-content input {
+    width: 100%;
+    height: 40px;
+    margin: 5px 0px;
+    border-radius: 6px;
+    border: 1px solid rgb(198, 198, 198);
+  }
+  
+  .content-login {
+    width: 100%;
+    margin: 5px 0px;
+    height: 40px;
+  }
+  
+  .content-regist {
+    width: 100%;
+    margin: 5px 0px;
+    height: 40px;
+  }

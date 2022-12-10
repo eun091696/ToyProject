@@ -7,14 +7,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/header.css">
-    <link rel="stylesheet" href="/static/css/menu.css">
+    <link rel="stylesheet" href="/static/css/register.css">
 </head>
 <body>
     <header>
         <div class="header">
             <div class="top-link">
-                <button class="btn">로그인</button>
-                <button class="btn">회원가입</button>
+                <button class="btn login-btn">로그인</button>
+                <button class="btn register-btn">회원가입</button>
             </div>
             <div class="main-logo">
                 <a href=""><img src="/static/image/main-logo.png" class="logo-img"></a>
@@ -29,18 +29,14 @@
            </nav>
         </div>
     </header>
-    <main>
-        <div class="menu-container">
-            <div class="menu-img-container">
-                <img src="/static/image/strawberry.png" class="menu-img">
-                <img src="/static/image/strawberry.png" class="menu-img">
-                <img src="/static/image/strawberry.png" class="menu-img">
-                <img src="/static/image/strawberry.png" class="menu-img">
-                <img src="/static/image/strawberry.png" class="menu-img">
-                <img src="/static/image/strawberry.png" class="menu-img">
-                <img src="/static/image/strawberry.png" class="menu-img">
-                <img src="/static/image/strawberry.png" class="menu-img">
-            </div>
+    <main class="main">
+        <div class="login-content">
+          <p>회원가입</p>
+          <input class="username" type="text" placeholder="아이디를 입력해주세요" required>
+          <input class="password" type="password" placeholder="비밀번호를 입력해주세요" required>
+          <input class="pw-chk" type="password" placeholder="비밀번호를 다시 입력해주세요" required>
+          <button type="submit" class="btn register">회원가입하기</button>
+          <button type="button" class="btn cancle">취소</button>
         </div>
     </main>
 </body>

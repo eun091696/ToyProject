@@ -5,6 +5,17 @@ spring:
   mvc:
     static-path-pattern: /static/**
 
+  security:
+    user:
+      name: admin
+      password: 1q2w3e4r!
+
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://database-2.ckgdwsl9oa5b.ap-northeast-1.rds.amazonaws.com:3306/ToyProject
+    username: admin
+    password: 1q2w3e4r
+
 mybatis:
   mapper-locations:
     - /mappers/*.xml

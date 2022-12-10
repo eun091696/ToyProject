@@ -9,7 +9,8 @@ a {
 
 .btn {
     border: none;
-    background-color: white;
+    background-color: black;
+    color: white;
     font-size: 7px;
     font-weight: 700;
 }

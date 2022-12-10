@@ -7,14 +7,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/header.css">
-    <link rel="stylesheet" href="/static/css/menu.css">
+    <link rel="stylesheet" href="/static/css/login.css">
 </head>
 <body>
     <header>
         <div class="header">
             <div class="top-link">
-                <button class="btn">로그인</button>
-                <button class="btn">회원가입</button>
+                <button class="btn login-btn">로그인</button>
+                <button class="btn register-btn">회원가입</button>
             </div>
             <div class="main-logo">
                 <a href=""><img src="/static/image/main-logo.png" class="logo-img"></a>
@@ -29,18 +29,15 @@
            </nav>
         </div>
     </header>
-    <main>
-        <div class="menu-container">
-            <div class="menu-img-container">
-                <img src="/static/image/strawberry.png" class="menu-img">
-                <img src="/static/image/strawberry.png" class="menu-img">
-                <img src="/static/image/strawberry.png" class="menu-img">
-                <img src="/static/image/strawberry.png" class="menu-img">
-                <img src="/static/image/strawberry.png" class="menu-img">
-                <img src="/static/image/strawberry.png" class="menu-img">
-                <img src="/static/image/strawberry.png" class="menu-img">
-                <img src="/static/image/strawberry.png" class="menu-img">
-            </div>
+    <main class="main">
+        <div class="login-content">
+          <p>로그인</p>
+          <form action="/login" method="post">
+            <input name="username" class="id" type="text" th:value="${username}" placeholder="아이디를 입력해주세요" required>
+            <input name="password" class="password" type="password" placeholder="패스워드를 입력해주세요" required>
+            <button class="btn content-login">로그인</button>
+            <button class="btn content-regist">회원가입</button>
+          </form>
         </div>
     </main>
 </body>

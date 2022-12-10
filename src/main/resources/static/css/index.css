@@ -1,35 +1,4 @@
-.header {
-    border-bottom: 1px solid ;
-}
 
-.top-link {
-    text-align: right;
-}
-
-.main-logo {
-    display: flex;
-    justify-content: center;
-}
-
-.logo-img {
-    height: 100px;
-}
-
-.nav {
-    display: flex;
-    justify-content: center;
-}
-
-.category {
-    display: flex;
-    width: 90%;
-    justify-content: space-around;
-}
-
-.category li a:hover {
-    color: black;
-    font-weight: 700;
-}
 
 .menu-img {
     display: flex;
