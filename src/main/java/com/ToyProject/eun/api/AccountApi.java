@@ -6,6 +6,7 @@ import com.ToyProject.eun.service.AccountService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,7 +20,7 @@ public class AccountApi {
     private final AccountService accountService;
 
     @PostMapping("/register")
-    public ResponseEntity<?> register(AccountDto accountDto) throws Exception {
+    public ResponseEntity<?> register(@RequestBody AccountDto accountDto) throws Exception {
         accountService.register(accountDto);
 
         return ResponseEntity.created(URI.create("/login")).body(new CMRespDto<>("Success", accountDto.getUsername()));
