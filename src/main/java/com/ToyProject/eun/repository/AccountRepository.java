@@ -4,6 +4,6 @@ import com.ToyProject.eun.domain.Account;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
-public class AccountRepository {
+public interface AccountRepository {
     public int saveUser(Account account) throws Exception;
 }

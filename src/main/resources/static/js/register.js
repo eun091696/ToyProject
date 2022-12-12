@@ -8,24 +8,30 @@ class Api {
     }
 
     getRegisterApi(user) {
-        let responseData = null;
+        const registerBtn = document.querySelector(".register");
 
-        $.ajax({
-            async: false,
-            type: "post",
-            url: "/api/account/register",
-            contentType: "application/json",
-            data: JSON.stringify(user),
-            dataType: "json",
-            success: (response) => {
-                responseData = response.data;
-            },
-            error: (error) => {
-                console.log(error);
-            }
-        })
-        return responseData;
-    }
+        // registerBtn.onclick = () => {
+        //     let user = {
+        //         "username" : document.querySelectorAll(".login-content input")[0].value,
+        //         "password" : document.querySelectorAll(".login-content input")[1].value,
+        //         "passwordChk" : document.querySelectorAll(".login-content input")[2].value
+        //     }
+            $.ajax({
+                async: false,
+                type: "post",
+                url: "/api/account/register",
+                contentType: "application/json",
+                data: JSON.stringify(user),
+                dataType: "json",
+                success: (response) => {
+                    console.log(response.data);
+                },
+                error: (error) => {
+                    console.log(error);
+                }
+            });
+        }
+    // }
 }
 
 class Event {
@@ -37,7 +43,6 @@ class Event {
         return this.#instance;
     }
 
-    #responseData;
 
     constructor() {
         this.registerEvent();
@@ -52,8 +57,14 @@ class Event {
                 "password" : document.querySelector(".password").value,
                 "passwordChk" : document.querySelector(".pw-chk").value
             }
-            this.#responseData = Api.getInstance().getRegisterApi(user);
+            console.log(user);
+            Api.getInstance().getRegisterApi(user);
         }
 
     }
+}
+
+window.onload = () => {
+    // Api.getInstance().getRegisterApi();
+    new Event();
 }

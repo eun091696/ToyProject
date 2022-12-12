@@ -4,5 +4,16 @@
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.ToyProject.eun.repository.AccountRepository">
-
+    <insert id="saveUser" parameterType="com.ToyProject.eun.domain.Account">
+        INSERT INTO
+            user_mst
+        VALUES (
+            0,
+            #{username},
+            #{password},
+            1,
+            NOW(),
+            NOW()
+        )
+    </insert>
 </mapper>

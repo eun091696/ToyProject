@@ -14,5 +14,8 @@ public class AccountServiceImpl implements AccountService {
     @Override
     public void register(AccountDto accountDto) throws Exception {
         int result = accountRepository.saveUser(accountDto.toEntity());
+        if(result == 0) {
+            System.out.println("회원가입 실패");
+        }
     }
 }

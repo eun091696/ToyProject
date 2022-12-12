@@ -1,5 +1,6 @@
 package com.ToyProject.eun.api;
 
+import com.ToyProject.eun.dto.AccountDto;
 import com.ToyProject.eun.dto.CMRespDto;
 import com.ToyProject.eun.service.AccountService;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +19,9 @@ public class AccountApi {
     private final AccountService accountService;
 
     @PostMapping("/register")
-    public ResponseEntity<?> register() throws Exception {
-        return ResponseEntity.created(URI.create("/login")).body(new CMRespDto<>("Success", null));
+    public ResponseEntity<?> register(AccountDto accountDto) throws Exception {
+        accountService.register(accountDto);
+
+        return ResponseEntity.created(URI.create("/login")).body(new CMRespDto<>("Success", accountDto.getUsername()));
     }
 }
