@@ -21,6 +21,9 @@ public class AccountApi {
 
     @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody AccountDto accountDto) throws Exception {
+
+        accountService.duplicateUsername(accountDto);
+        accountService.passwordChecking(accountDto);
         accountService.register(accountDto);
 
         return ResponseEntity.created(URI.create("/login")).body(new CMRespDto<>("Success", accountDto.getUsername()));

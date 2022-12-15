@@ -39,36 +39,6 @@ class Api {
     }
 }
 
-// class Event {
-//     static #instance = null;
-//     static getInstance() {
-//         if(this.#instance == null) {
-//             this.#instance = new Event();
-//         }
-//         return this.#instance;
-//     }
-
-
-//     constructor() {
-//         this.registerEvent();
-//     }
-
-//     registerEvent() {
-//         const registerBtn = document.querySelector(".register");
-
-//         registerBtn.onclick = () => {
-//             let user = {
-//                 "username" : document.querySelector(".username").value,
-//                 "password" : document.querySelector(".password").value,
-//                 "passwordChk" : document.querySelector(".pw-chk").value
-//             }
-//             new Api();
-//             console.log(new Api());
-//         }
-
-//     }
-// }
-
 window.onload = () => {
     Api.getInstance().getRegisterApi();
     // new Event();
