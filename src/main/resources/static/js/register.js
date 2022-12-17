@@ -27,9 +27,9 @@ class Api {
                 contentType: "application/json",
                 data: JSON.stringify(user),
                 dataType: "json",
-                success: (response) => {
-                    console.log(response.data);
-                    console.log("실행되요");
+                success: (response, textStatus, request) => {
+                    const successURI = request.getResponseHeader("Location");
+                    location.replace(successURI + "?username=" + response.data);
                 },
                 error: (error) => {
                     console.log(error);
@@ -41,5 +41,5 @@ class Api {
 
 window.onload = () => {
     Api.getInstance().getRegisterApi();
-    // new Event();
+    new HeaderBtnEvent();
 }

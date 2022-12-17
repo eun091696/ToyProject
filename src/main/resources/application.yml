@@ -5,6 +5,11 @@ spring:
   mvc:
     static-path-pattern: /static/**
 
+  security:
+    user:
+      name: admin
+      password: 1q2w3e4r!
+
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
     url: jdbc:mariadb://127.0.0.1:3307/toyproject
