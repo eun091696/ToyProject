@@ -18,15 +18,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
         http.httpBasic().disable();
         http.authorizeRequests()
-                .antMatchers("/")
+                .antMatchers("/123")
                 .authenticated()
                 .anyRequest()
                 .permitAll()
                 .and()
                 .formLogin()
-                .usernameParameter("username")
                 .loginPage("/login")
-                .loginProcessingUrl("/login");
+                .loginProcessingUrl("/login")
+                .failureHandler(new AuthFailureHandler())
+                .defaultSuccessUrl("/");
 
     }
 }

@@ -2,8 +2,7 @@ package com.ToyProject.eun.service;
 
 import com.ToyProject.eun.domain.Account;
 import com.ToyProject.eun.dto.AccountDto;
-import com.ToyProject.eun.ecxception.CustomInternalServerErrorException;
-import com.ToyProject.eun.ecxception.CustomValidationException;
+import com.ToyProject.eun.exception.CustomValidationException;
 import com.ToyProject.eun.repository.AccountRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

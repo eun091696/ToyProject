@@ -17,11 +17,8 @@ public class AccountController {
     }
 
     @GetMapping("/login")
-    public String login(HttpServletRequest request, Model model, @RequestParam @Nullable String username) {
-            String uri = request.getHeader("Referer");
-            if(uri != null && !uri.contains("/login") && !uri.contains("register")) {
-            request.getSession().setAttribute("prevPage", uri);
-        }
+    public String login(Model model, @RequestParam @Nullable String username) {
+
         model.addAttribute("username", username == null ? "" : username);
         return "login";
     }

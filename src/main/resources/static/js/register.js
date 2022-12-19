@@ -32,7 +32,15 @@ class Api {
                     location.replace(successURI + "?username=" + response.data);
                 },
                 error: (error) => {
-                    console.log(error);
+                    if(error.responseJSON.data.username != undefined && error.responseJSON.data.password != undefined) {
+                        alert(error.responseJSON.data.username + "\n" + error.responseJSON.data.password);
+                    }else if(error.responseJSON.data.username != undefined){
+                        alert(error.responseJSON.data.username);
+                    }else if(error.responseJSON.data.password != undefined){
+                        alert(error.responseJSON.data.password)
+                    }else {
+                        alert(error.responseJSON.data.passwordChk)
+                    }
                 }
             });
         }
