@@ -50,4 +50,5 @@ class Api {
 window.onload = () => {
     Api.getInstance().getRegisterApi();
     new HeaderBtnEvent();
+    new CategoryEvent();
 }

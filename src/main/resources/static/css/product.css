@@ -1,0 +1,18 @@
+.menu-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.product-img {
+    
+    margin: 30px 0px 30px 30px;
+    width: 21%;
+}
+
+.login-btn, .register-btn {
+    background-color: white;
+    color: black;
+    font-size: 15px;
+}

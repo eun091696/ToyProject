@@ -27,5 +27,6 @@ class ErrorName {
 
 window.onload = () => {
     new HeaderBtnEvent();
+    new CategoryEvent();
     new ErrorName();
 }
