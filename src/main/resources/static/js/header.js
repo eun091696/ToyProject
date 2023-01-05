@@ -64,26 +64,37 @@ class HeaderBtnEvent {
     }
 
     constructor() {
-        this.LoginBtnEvent();
-        this.RegisterBtn();
-        this.LogoImgBtn();
+        this.headerBtnEvent();
     }
 
-    LoginBtnEvent() {
+    headerBtnEvent() {
         const loginBtn = document.querySelector(".login-btn");
-        loginBtn.onclick = () => {
+        if(loginBtn != null) {
+            loginBtn.onclick = () => {
             location.href = "/login";
+            }
         }
-    }
 
-    RegisterBtn() {
         const registerBtn = document.querySelector(".register-btn");
-        registerBtn.onclick = () => {
+        if(registerBtn != null) {registerBtn.onclick = () => {
             location.href = "/register";
+            }
         }
-    }
 
-    LogoImgBtn() {
+        const logoutBtn = document.querySelector(".logout-btn");
+        if(logoutBtn != null) {
+            logoutBtn.onclick = () => {
+            location.href = "/logout";
+            }
+        }
+
+        const cartBtn = document.querySelector(".cart-btn");
+        if(cartBtn != null) {
+            cartBtn.onclick = () => {
+                location.href = "/cart";
+            }
+        }
+
         const LogoImgBtn = document.querySelector(".logo-img");
         LogoImgBtn.onclick = () => {
             location.href = "/";

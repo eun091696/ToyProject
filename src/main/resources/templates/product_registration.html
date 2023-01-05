@@ -8,7 +8,7 @@
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/header.css">
-    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="/static/css/product_registration.css">
 </head>
 <body>
     <header>
@@ -33,11 +33,27 @@
         </div>
     </header>
     <main>
-        <div class="menu-img">
-            <img src="/static/image/strawberry.png" class="str-img">
+        <div class = "container">
+            <div class="img-container">
+                <h1 class="comment">상품등록</h1>
+                <div class="main">
+                    <div class="img">
+                        <img src="https://i0.wp.com/adventure.co.kr/wp-content/uploads/2020/09/no-image.jpg" class="image-box">
+                        <label for="file" class="upload-btn"> 
+                            <input id="file" type="file" accept="image/*" class="file-input">
+                            <span>사진 등록</span>
+                        </label>
+                    </div>
+                    <div class="products-container">
+                        <input type="text" class="product-inputs" placeholder="상품명">
+                        <input type="number" class="product-price" placeholder="가격">
+                        <button type="button" class="product-btn">등록</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <script src="/static/js/header.js"></script>
-    <script src="/static/js/index.js"></script>
+    <script src="/static/js/product_registration.js"></script>
 </body>
 </html>

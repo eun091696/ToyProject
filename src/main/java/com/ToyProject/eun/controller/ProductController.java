@@ -10,4 +10,9 @@ public class ProductController {
     public String index() {
         return "index";
     }
+
+    @GetMapping("/product/registration")
+    public String product_registrations() {
+        return "product_registration";
+    }
 }
