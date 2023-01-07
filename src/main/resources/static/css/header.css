@@ -2,7 +2,7 @@
     border-bottom: 1px solid ;
 }
 
-.login-btn, .register-btn, .logout-btn, .cart-btn {
+.login-btn, .register-btn, .logout-btn, .cart-btn, .productRegister-btn {
     background-color: white;
     color: black;
     font-size: 15px;
@@ -17,6 +17,10 @@
 }
 
 .logout-btn:hover {
+    color: gray;
+}
+
+.productRegister-btn:hover {
     color: gray;
 }
 

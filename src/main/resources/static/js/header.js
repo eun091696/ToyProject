@@ -99,5 +99,12 @@ class HeaderBtnEvent {
         LogoImgBtn.onclick = () => {
             location.href = "/";
         }
+
+        const productRegisterBtn = document.querySelector(".productRegister-btn");
+        if(productRegisterBtn != null) {
+            productRegisterBtn.onclick = () => {
+                location.href = "/product/registration";
+            }
+        }
     }
 }

@@ -15,6 +15,7 @@
         <div class="header">
             <div class="top-link">
                 <button class="btn login-btn" sec:authorize="isAnonymous()">로그인</button>
+                <button class="btn productRegister-btn" sec:authorize="isAuthenticated()">상품등록</button> 
                 <button class="btn logout-btn" sec:authorize="isAuthenticated()">로그아웃</button> 
                 <button class="btn register-btn" sec:authorize="isAnonymous()">회원가입</button>
                 <button class="btn cart-btn" sec:authorize="isAuthenticated()">장바구니</button> 
