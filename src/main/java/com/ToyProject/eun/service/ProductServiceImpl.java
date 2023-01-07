@@ -15,7 +15,7 @@ public class ProductServiceImpl implements ProductService{
     public void productRegister(ProductDto productDto) throws Exception {
         int result = productRepository.productRegister(productDto.toEntity());
         if(result == 0) {
-            System.out.println("회원가입 실패");
+            System.out.println("상품등록 실패");
         }
     }
 }

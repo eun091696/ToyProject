@@ -36,7 +36,7 @@ class ProductApi {
 
     postProductApi(product) {
         let responseData = null;
-        $.ajaxZ({
+        $.ajax({
             async: false,
             type: "post",
             url: "/product/registration",
@@ -72,9 +72,10 @@ class registEvent {
         productBtn.onclick = () => {
             let product = {
                 pdtName: document.querySelector(".product-inputs").value,
-                pdtPrice: document.querySelector(".product-price").value
+                pdtPrice: document.querySelector(".product-price").value,
+                pdtImg: "hello"
             }
-            ProductApi().getInstance().postProductApi(product);
+            ProductApi.getInstance().postProductApi(product);
         }
     }
 }

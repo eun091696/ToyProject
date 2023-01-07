@@ -41,7 +41,9 @@
                     <div class="img">
                         <img src="https://i0.wp.com/adventure.co.kr/wp-content/uploads/2020/09/no-image.jpg" class="image-box">
                         <label for="file" class="upload-btn"> 
-                            <input id="file" type="file" accept="image/*" class="file-input">
+                            <form enctype="multipart/form-data">
+                                <input id="file" type="file" accept="image/*" class="file-input">
+                            </form>
                             <span>사진 등록</span>
                         </label>
                     </div>

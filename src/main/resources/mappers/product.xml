@@ -9,9 +9,9 @@
             product_mst
         VALUES(
             0,
-            #{pdtName},
-            #{pdtPrice},
-<!--            #{pdtImg},-->
+            #{pdt_name},
+            #{pdt_price},
+            #{pdt_img},
             NOW(),
             NOW()
         )

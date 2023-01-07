@@ -18,4 +18,5 @@ public class Product {
     private String pdt_img;
     private LocalDateTime create_date;
     private LocalDateTime update_date;
+
 }
