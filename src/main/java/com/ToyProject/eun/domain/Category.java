@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 public class Category {
     private int id;
     private String category_name;
+    private String category_url;
     private LocalDateTime create_date;
     private LocalDateTime update_date;
 
@@ -17,6 +18,8 @@ public class Category {
         return CategoryDto.builder()
                 .id(id)
                 .category_name(category_name)
+                .category_url(category_url)
                 .build();
     }
+
 }

@@ -17,5 +17,6 @@ public class ProductServiceImpl implements ProductService{
         if(result == 0) {
             System.out.println("상품등록 실패");
         }
+        System.out.println(productDto.getPdtImg());
     }
 }

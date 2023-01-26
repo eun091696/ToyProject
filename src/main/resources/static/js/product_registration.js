@@ -69,13 +69,34 @@ class registEvent {
 
     registBtnEvent() {
         const productBtn = document.querySelector(".product-btn");
+        const src = document.querySelector(".image-box").src;
         productBtn.onclick = () => {
             let product = {
                 pdtName: document.querySelector(".product-inputs").value,
                 pdtPrice: document.querySelector(".product-price").value,
-                pdtImg: "hello"
+                // pdtImg: document.querySelector(".image-box").src
+                pdtImg: src.substring(src.lastIndexOf("/") + 1)
             }
+            console.log(product);
             ProductApi.getInstance().postProductApi(product);
+        }
+    }
+}
+
+class ProductImgFile {
+    static #instance = null;
+    static getInstance() {
+        if(this.#instance == null) {
+            this.#instance = new ProductImgFile();
+        }
+        return this.#instance;
+    }
+
+    addFileInputClickEvent() {
+        const filesInput = document.querySelector(".file-input");
+        const uploadBtn = document.querySelector(".upload-btn");
+        uploadBtn.onclick = () => {
+            filesInput.click();
         }
     }
 }

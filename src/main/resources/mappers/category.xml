@@ -6,7 +6,8 @@
 <mapper namespace="com.ToyProject.eun.repository.CategoryRepository">
     <select id="getCategoryNames" resultType="com.ToyProject.eun.domain.Category">
         SELECT
-            category_name
+            category_name,
+            category_url
         FROM
             category_mst
     </select>

@@ -57,3 +57,9 @@
     color: black;
     font-weight: 700;
 }
+
+.login-btn, .register-btn {
+    background-color: white;
+    color: black;
+    font-size: 15px;
+}

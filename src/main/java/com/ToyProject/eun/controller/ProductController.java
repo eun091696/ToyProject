@@ -15,4 +15,7 @@ public class ProductController {
     public String product_registrations() {
         return "product_registration";
     }
+
+    @GetMapping("/menu")
+    public String menu() {return "menu";}
 }

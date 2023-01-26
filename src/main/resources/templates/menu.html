@@ -14,8 +14,11 @@
     <header>
         <div class="header">
             <div class="top-link">
-                <button class="btn">로그인</button>
-                <button class="btn">회원가입</button>
+                <button class="btn login-btn" sec:authorize="isAnonymous()">로그인</button>
+                <button class="btn productRegister-btn" sec:authorize="isAuthenticated()">상품등록</button> 
+                <button class="btn logout-btn" sec:authorize="isAuthenticated()">로그아웃</button> 
+                <button class="btn register-btn" sec:authorize="isAnonymous()">회원가입</button>
+                <button class="btn cart-btn" sec:authorize="isAuthenticated()">장바구니</button> 
             </div>
             <div class="main-logo">
                 <img src="/static/image/main-logo.png" class="logo-img">
@@ -30,16 +33,41 @@
     <main>
         <div class="menu-container">
             <div class="menu-img-container">
-                <img src="/static/image/strawberry.png" class="menu-img">
-                <img src="/static/image/strawberry.png" class="menu-img">
-                <img src="/static/image/strawberry.png" class="menu-img">
-                <img src="/static/image/strawberry.png" class="menu-img">
-                <img src="/static/image/strawberry.png" class="menu-img">
-                <img src="/static/image/strawberry.png" class="menu-img">
-                <img src="/static/image/strawberry.png" class="menu-img">
-                <img src="/static/image/strawberry.png" class="menu-img">
+                <div class="menu-dtl">
+                    <img src="/static/image/strawberry.png" class="menu-img">
+                    <div>안녕</div>
+                    <div>123</div>
+                </div>
+                <div class="menu-dtl">
+                    <img src="/static/image/strawberry.png" class="menu-img">
+                    <div>안녕</div>
+                    <div>123</div>
+                </div>
+                <div class="menu-dtl">
+                    <img src="/static/image/strawberry.png" class="menu-img">
+                    <div>안녕</div>
+                    <div>123</div>
+                </div>
+                <div class="menu-dtl">
+                    <img src="/static/image/strawberry.png" class="menu-img">
+                    <div>안녕</div>
+                    <div>123</div>
+                </div>
+                <div class="menu-dtl">
+                    <img src="/static/image/strawberry.png" class="menu-img">
+                    <div>안녕</div>
+                    <div>123</div>
+                </div>
+                <div class="menu-dtl">
+                    <img src="/static/image/strawberry.png" class="menu-img">
+                    <div>안녕</div>
+                    <div>123</div>
+                </div>
+                
             </div>
         </div>
     </main>
+    <script src="/static/js/header.js"></script>
+    <script src="/static/js/index.js"></script>
 </body>
 </html>

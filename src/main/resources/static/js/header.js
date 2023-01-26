@@ -16,6 +16,7 @@ class CategoryApi {
             dataType: "json",
             success: (response) => {
                 responseData = response.data;
+                console.log(responseData)
             },
             error: (error) => {
                 console.log(error)
@@ -47,7 +48,7 @@ class CategoryEvent {
         if(this.#responseCategoryData != null) {
             this.#responseCategoryData.forEach(categoryName => {
                 category.innerHTML += `
-                <li><a href="">${categoryName.category_name}</a></li>
+                <li ><a href="${categoryName.category_url}">${categoryName.category_name}</a></li>
                 `;
             });
         }
