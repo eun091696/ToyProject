@@ -11,4 +11,13 @@
         FROM
             category_mst
     </select>
+    <select id="getMenuList" resultType="com.ToyProject.eun.domain.Menu">
+        SELECT
+            id,
+            pdt_name,
+            pdt_price,
+            pdt_img
+        FROM
+            product_mst
+    </select>
 </mapper>

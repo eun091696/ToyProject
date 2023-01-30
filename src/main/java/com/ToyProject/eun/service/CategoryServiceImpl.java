@@ -1,6 +1,7 @@
 package com.ToyProject.eun.service;
 
 import com.ToyProject.eun.dto.CategoryDto;
+import com.ToyProject.eun.dto.MenuDto;
 import com.ToyProject.eun.repository.CategoryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -21,5 +22,14 @@ public class CategoryServiceImpl implements CategoryService{
             categoryDtoList.add(categoryName.toDto());
         });
         return categoryDtoList;
+    }
+
+    @Override
+    public List<MenuDto> getMenu() throws Exception {
+        List<MenuDto> menuDtoList = new ArrayList<>();
+        categoryRepository.getMenuList().forEach(menu -> {
+            menuDtoList.add(menu.toDto());
+        });
+        return menuDtoList;
     }
 }

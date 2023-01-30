@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface CategoryService {
     public List<CategoryDto> categoryList() throws Exception;
+    public List<?> getMenu() throws Exception;
 }

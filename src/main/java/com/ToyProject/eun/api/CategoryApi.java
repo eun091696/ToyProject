@@ -21,6 +21,6 @@ public class CategoryApi {
 
     @GetMapping("/menu")
     public ResponseEntity<?> menu() throws Exception {
-        return ResponseEntity.ok().body(new CMRespDto<>("Get Menu", null));
+        return ResponseEntity.ok().body(new CMRespDto<>("Get Menu", categoryService.getMenu()));
     }
 }
